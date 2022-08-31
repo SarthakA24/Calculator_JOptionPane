@@ -21,6 +21,18 @@ public class Calculator {
         }
     }
 
+    public void displayDetails() {
+        if (operation.equals("Add")) {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "The sum of the numbers is " + sum,
+                    "Calculator",
+                    JOptionPane.PLAIN_MESSAGE,
+                    icon);
+        }
+    }
+
+
     public Calculator() {
     }
 
