@@ -14,13 +14,15 @@ public class CalculatorImpl {
         Calculator calculator = new Calculator();
         // Initialise the scanner
         Scanner scanner = new Scanner(System.in);
+        // Declare the object for the ImageIcon class
+        ImageIcon icon = new ImageIcon("src/main/resources/images/Calculator-icon.png");
         // Prompt the user to enter the number using JOptionPane
         double input = Double.parseDouble((String) JOptionPane.showInputDialog(
                 null,
                 "Enter the number",
                 "Calculator",
                 JOptionPane.PLAIN_MESSAGE,
-                null,
+                icon,
                 null,
                 null
         ));
