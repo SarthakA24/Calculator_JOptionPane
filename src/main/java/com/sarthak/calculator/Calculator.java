@@ -11,12 +11,10 @@ public class Calculator {
     private double multiply;
     private double divide;
 
-    public double add(double... numbers) {
-        double sum = 0;
+    public void add(double... numbers) {
         for (double number : numbers) {
-            sum += number;
+            this.sum += number;
         }
-        return sum;
     }
 
     public Calculator() {
