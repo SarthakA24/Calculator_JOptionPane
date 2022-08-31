@@ -5,12 +5,15 @@
  */
 package com.sarthak.calculator;
 
+import javax.swing.*;
+
 public class Calculator {
     private double sum;
     private double subtract;
     private double multiply;
     private double divide;
     private String operation;
+    private final static Icon icon = new ImageIcon("src/main/resources/images/calculator.png");
 
     public void add(double... numbers) {
         for (double number : numbers) {
@@ -19,6 +22,10 @@ public class Calculator {
     }
 
     public Calculator() {
+    }
+
+    public static Icon getIcon() {
+        return icon;
     }
 
     public Calculator(double sum, double subtract, double multiply, double divide, String operation) {
