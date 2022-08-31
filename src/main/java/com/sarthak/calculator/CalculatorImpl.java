@@ -40,5 +40,10 @@ public class CalculatorImpl {
                 new String[]{"Add", "Subtract", "Multiply", "Divide"},
                 null)
         );
+        // Start the if condition to check the operation and call the respective method
+        if (calculator.getOperation().equals("Add")) {
+            calculator.add(input);
+            calculator.displayDetails();
+        }
     }
 }
