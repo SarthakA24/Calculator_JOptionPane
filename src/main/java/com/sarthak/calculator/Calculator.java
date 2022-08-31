@@ -18,4 +18,14 @@ public class Calculator {
         }
         return sum;
     }
+
+    public Calculator() {
+    }
+
+    public Calculator(double sum, double subtract, double multiply, double divide) {
+        this.sum = sum;
+        this.subtract = subtract;
+        this.multiply = multiply;
+        this.divide = divide;
+    }
 }
