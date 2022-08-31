@@ -6,4 +6,11 @@
 package com.sarthak.calculator;
 
 public class Calculator {
+    public double add(double[] numbers) {
+        double sum = 0;
+        for (double number : numbers) {
+            sum += number;
+        }
+        return sum;
+    }
 }
