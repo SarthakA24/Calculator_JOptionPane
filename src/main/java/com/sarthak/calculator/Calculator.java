@@ -28,4 +28,36 @@ public class Calculator {
         this.multiply = multiply;
         this.divide = divide;
     }
+
+    public double getSum() {
+        return sum;
+    }
+
+    public void setSum(double sum) {
+        this.sum = sum;
+    }
+
+    public double getSubtract() {
+        return subtract;
+    }
+
+    public void setSubtract(double subtract) {
+        this.subtract = subtract;
+    }
+
+    public double getMultiply() {
+        return multiply;
+    }
+
+    public void setMultiply(double multiply) {
+        this.multiply = multiply;
+    }
+
+    public double getDivide() {
+        return divide;
+    }
+
+    public void setDivide(double divide) {
+        this.divide = divide;
+    }
 }
