@@ -5,6 +5,7 @@
  */
 package com.sarthak.calculator;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class CalculatorImpl {
@@ -13,7 +14,16 @@ public class CalculatorImpl {
         Calculator calculator = new Calculator();
         // Initialise the scanner
         Scanner scanner = new Scanner(System.in);
-
+        // Prompt the user to enter the number using JOptionPane
+        double input = Double.parseDouble((String) JOptionPane.showInputDialog(
+                null,
+                "Enter the number",
+                "Calculator",
+                JOptionPane.PLAIN_MESSAGE,
+                null,
+                null,
+                null
+        ));
         // Close the scanner
         scanner.close();
     }
