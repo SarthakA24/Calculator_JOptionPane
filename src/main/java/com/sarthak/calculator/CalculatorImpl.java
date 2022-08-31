@@ -6,4 +6,7 @@
 package com.sarthak.calculator;
 
 public class CalculatorImpl {
+    public static void main(String[] args) {
+
+    }
 }
