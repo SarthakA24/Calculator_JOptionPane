@@ -13,7 +13,7 @@ public class Calculator {
     private double multiply;
     private double divide;
     private String operation;
-    private final static Icon icon = new ImageIcon("src/main/resources/images/calculator.png");
+    private final static Icon icon = new ImageIcon("src/main/resources/images/Calculator-icon.png");
 
     public void add(double... numbers) {
         for (double number : numbers) {
