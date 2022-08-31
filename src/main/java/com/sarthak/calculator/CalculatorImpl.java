@@ -26,6 +26,16 @@ public class CalculatorImpl {
                 null,
                 null
         ));
+        // Prompt the user to enter the operation using JOptionPane
+        String operation = (String) JOptionPane.showInputDialog(
+                null,
+                "Enter the operation",
+                "Calculator",
+                JOptionPane.PLAIN_MESSAGE,
+                icon,
+                new String[]{"Add", "Subtract", "Multiply", "Divide"},
+                null
+        );
         // Close the scanner
         scanner.close();
     }
