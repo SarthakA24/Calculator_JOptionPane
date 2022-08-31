@@ -10,6 +10,7 @@ public class Calculator {
     private double subtract;
     private double multiply;
     private double divide;
+    private String operation;
 
     public void add(double... numbers) {
         for (double number : numbers) {
@@ -20,11 +21,12 @@ public class Calculator {
     public Calculator() {
     }
 
-    public Calculator(double sum, double subtract, double multiply, double divide) {
+    public Calculator(double sum, double subtract, double multiply, double divide, String operation) {
         this.sum = sum;
         this.subtract = subtract;
         this.multiply = multiply;
         this.divide = divide;
+        this.operation = operation;
     }
 
     public double getSum() {
@@ -45,6 +47,14 @@ public class Calculator {
 
     public double getMultiply() {
         return multiply;
+    }
+
+    public String getOperation() {
+        return operation;
+    }
+
+    public void setOperation(String operation) {
+        this.operation = operation;
     }
 
     public void setMultiply(double multiply) {
