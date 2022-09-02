@@ -28,13 +28,13 @@ public class CalculatorImpl {
                 JOptionPane.PLAIN_MESSAGE,
                 Calculator.getIcon());
         calculator.setOperation(operator.getText());
-//        if (calculatorOption == JOptionPane.OK_OPTION) {
+        if (calculatorOption == JOptionPane.OK_OPTION) {
 //            // Start the if condition to check the operation and call the respective method
 //            if (calculator.getOperation().equals("Add")) {
 //                calculator.add(Integer.parseInt(firstNumber.getText()),Integer.parseInt(secondNumber.getText()));
 //                calculator.displayDetails();
 //            }
-//        }
+        }
 //        double input = Double.parseDouble((String) JOptionPane.showInputDialog(
 //                null,
 //                "Enter the number",
