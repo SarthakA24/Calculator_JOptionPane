@@ -9,6 +9,7 @@ import javax.swing.*;
 
 public class CalculatorImpl {
     public static void main(String[] args) {
+        int error = 0;
         // Create and object for the calculator class
         Calculator calculator = new Calculator();
         // Prompt the user to enter the number using JOptionPane
