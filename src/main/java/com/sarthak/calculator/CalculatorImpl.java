@@ -9,7 +9,7 @@ import javax.swing.*;
 
 public class CalculatorImpl {
     public static void main(String[] args) {
-        int error;
+        boolean wantToRetry = false;
         // Create and object for the calculator class
         Calculator calculator = new Calculator();
         // Prompt the user to enter the number using JOptionPane
@@ -31,7 +31,6 @@ public class CalculatorImpl {
                     Calculator.getIcon()
             );
             if (calculatorOption == JOptionPane.OK_OPTION) {
-                error = 0;
                 if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
                     calculator.setOperation("ADD");
                     calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
@@ -51,22 +50,10 @@ public class CalculatorImpl {
                             JOptionPane.ERROR_MESSAGE,
                             Calculator.getIcon()
                     );
-                    error = -1;
                 }
             } else {
-                int response = JOptionPane.showConfirmDialog(
-                        null,
-                        "Do you want to re-try?",
-                        "Calculator",
-                        JOptionPane.YES_NO_OPTION,
-                        JOptionPane.QUESTION_MESSAGE,
-                        Calculator.getIcon()
-                );
-                if (response == JOptionPane.YES_OPTION)
-                    error = -1;
-                else
-                    error = 0;
+                wantToRetry = calculator.wantToRetry();
             }
-        } while (error != 0);
+        } while (wantToRetry);
     }
 }
