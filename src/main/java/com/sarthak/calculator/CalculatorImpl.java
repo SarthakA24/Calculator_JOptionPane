@@ -28,29 +28,29 @@ public class CalculatorImpl {
                     "Calculator",
                     JOptionPane.YES_NO_CANCEL_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
-                    Calculator.getIcon());
-            if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
-                calculator.setOperation("ADD");
-            } else if (operator.getText().equalsIgnoreCase("SUBTRACT") || operator.getText().equals("-")) {
-                calculator.setOperation("SUBTRACT");
-            } else if (operator.getText().equalsIgnoreCase("MULTIPLY") || operator.getText().equals("*") || operator.getText().equalsIgnoreCase("X")) {
-                calculator.setOperation("MULTIPLY");
-            } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/") || operator.getText().equals("÷")) {
-                calculator.setOperation("DIVIDE");
-            } else {
-                JOptionPane.showMessageDialog(
-                        null,
-                        "Invalid Input for Operator. Please try again",
-                        "Calculator",
-                        JOptionPane.ERROR_MESSAGE,
-                        Calculator.getIcon());
-                error = -1;
-            }
+                    Calculator.getIcon()
+            );
             if (calculatorOption == JOptionPane.OK_OPTION) {
-                // Start the if condition to check the operation and call the respective method
-                if (calculator.getOperation().equals("ADD")) {
-                    calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
-                }
+                if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
+                    calculator.setOperation("ADD");
+                } else if (operator.getText().equalsIgnoreCase("SUBTRACT") || operator.getText().equals("-")) {
+                    calculator.setOperation("SUBTRACT");
+                } else if (operator.getText().equalsIgnoreCase("MULTIPLY") || operator.getText().equals("*")
+                        || operator.getText().equalsIgnoreCase("X")) {
+                    calculator.setOperation("MULTIPLY");
+                } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/")
+                        || operator.getText().equals("÷")) {
+                    calculator.setOperation("DIVIDE");
+                } else {
+                    JOptionPane.showMessageDialog(
+                            null,
+                            "Invalid Input for Operator. Please try again",
+                            "Calculator",
+                            JOptionPane.ERROR_MESSAGE,
+                            Calculator.getIcon()
+                    );
+                    error = -1;
+            }
             }
         } while (error != 0);
     }
