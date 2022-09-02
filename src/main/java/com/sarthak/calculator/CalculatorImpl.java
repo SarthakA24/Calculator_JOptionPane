@@ -38,13 +38,12 @@ public class CalculatorImpl {
             } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/") || operator.getText().equals("÷")) {
                 calculator.setOperation("DIVIDE");
             } else {
-                JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again");
-                // Sleep for 1000 milliseconds
-//                try {
-//                    Thread.sleep(1000);
-//                } catch (Exception e) {
-//                    System.err.println("Invalid Sleep Input.");
-//                }
+                JOptionPane.showMessageDialog(
+                        null,
+                        "Invalid Input for Operator. Please try again",
+                        "Calculator",
+                        JOptionPane.ERROR_MESSAGE,
+                        Calculator.getIcon());
                 error = -1;
             }
             if (calculatorOption == JOptionPane.OK_OPTION) {
