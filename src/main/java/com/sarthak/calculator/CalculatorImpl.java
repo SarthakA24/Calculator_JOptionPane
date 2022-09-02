@@ -20,28 +20,39 @@ public class CalculatorImpl {
                 "Operator : ", operator,
                 "Second Number : ", secondNumber
         };
-        double input = Double.parseDouble((String) JOptionPane.showInputDialog(
+        int calculatorOption = JOptionPane.showConfirmDialog(
                 null,
-                "Enter the number",
+                message,
                 "Calculator",
+                JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.PLAIN_MESSAGE,
-                Calculator.getIcon(),
-                null,
-                null
-        ));
-        calculator.setOperation((String) JOptionPane.showInputDialog(
-                null,
-                "Enter the operation",
-                "Calculator",
-                JOptionPane.PLAIN_MESSAGE,
-                Calculator.getIcon(),
-                new String[]{"Add", "Subtract", "Multiply", "Divide"},
-                null)
-        );
-        // Start the if condition to check the operation and call the respective method
-        if (calculator.getOperation().equals("Add")) {
-            calculator.add(input);
-            calculator.displayDetails();
-        }
+                Calculator.getIcon());
+        calculator.setOperation(operator.getText());
+//        if (calculatorOption == JOptionPane.OK_OPTION) {
+//            // Start the if condition to check the operation and call the respective method
+//            if (calculator.getOperation().equals("Add")) {
+//                calculator.add(Integer.parseInt(firstNumber.getText()),Integer.parseInt(secondNumber.getText()));
+//                calculator.displayDetails();
+//            }
+//        }
+//        double input = Double.parseDouble((String) JOptionPane.showInputDialog(
+//                null,
+//                "Enter the number",
+//                "Calculator",
+//                JOptionPane.PLAIN_MESSAGE,
+//                Calculator.getIcon(),
+//                null,
+//                null
+//        ));
+//        calculator.setOperation((String) JOptionPane.showInputDialog(
+//                null,
+//                "Enter the operation",
+//                "Calculator",
+//                JOptionPane.PLAIN_MESSAGE,
+//                Calculator.getIcon(),
+//                new String[]{"Add", "Subtract", "Multiply", "Divide"},
+//                null)
+//        );
+
     }
 }
