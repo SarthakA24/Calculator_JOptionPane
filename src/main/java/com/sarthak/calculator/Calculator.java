@@ -34,6 +34,20 @@ public class Calculator {
         programEndDisplay();
     }
 
+    public boolean wantToRetry() {
+        int response = JOptionPane.showConfirmDialog(
+                null,
+                "Do you want to re-try?",
+                "Calculator",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                Calculator.getIcon()
+        );
+        if (response == JOptionPane.NO_OPTION)
+            programEndDisplay();
+        return response == JOptionPane.YES_OPTION;
+    }
+
     public void programEndDisplay() {
         System.out.println("Program Ended Successfully!");
     }
