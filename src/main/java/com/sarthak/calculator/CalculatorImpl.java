@@ -27,7 +27,17 @@ public class CalculatorImpl {
                 JOptionPane.YES_NO_CANCEL_OPTION,
                 JOptionPane.PLAIN_MESSAGE,
                 Calculator.getIcon());
-        calculator.setOperation(operator.getText());
+        if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
+            calculator.setOperation("ADD");
+        } else if (operator.getText().equalsIgnoreCase("SUBTRACT") || operator.getText().equals("-")) {
+            calculator.setOperation("SUBTRACT");
+        } else if (operator.getText().equalsIgnoreCase("MULTIPLY") || operator.getText().equals("*") || operator.getText().equalsIgnoreCase("X")) {
+            calculator.setOperation("MULTIPLY");
+        } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/") || operator.getText().equals("÷")) {
+            calculator.setOperation("DIVIDE");
+        } else {
+            System.out.println("Invalid input for Operator. Please try again!");
+        }
         if (calculatorOption == JOptionPane.OK_OPTION) {
             // Start the if condition to check the operation and call the respective method
             if (calculator.getOperation().equals("Add")) {
@@ -35,24 +45,5 @@ public class CalculatorImpl {
                 calculator.displayDetails();
             }
         }
-//        double input = Double.parseDouble((String) JOptionPane.showInputDialog(
-//                null,
-//                "Enter the number",
-//                "Calculator",
-//                JOptionPane.PLAIN_MESSAGE,
-//                Calculator.getIcon(),
-//                null,
-//                null
-//        ));
-//        calculator.setOperation((String) JOptionPane.showInputDialog(
-//                null,
-//                "Enter the operation",
-//                "Calculator",
-//                JOptionPane.PLAIN_MESSAGE,
-//                Calculator.getIcon(),
-//                new String[]{"Add", "Subtract", "Multiply", "Divide"},
-//                null)
-//        );
-
     }
 }
