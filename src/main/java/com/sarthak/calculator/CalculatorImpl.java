@@ -26,7 +26,7 @@ public class CalculatorImpl {
                     null,
                     message,
                     "Calculator",
-                    JOptionPane.YES_NO_CANCEL_OPTION,
+                    JOptionPane.YES_NO_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
                     Calculator.getIcon()
             );
