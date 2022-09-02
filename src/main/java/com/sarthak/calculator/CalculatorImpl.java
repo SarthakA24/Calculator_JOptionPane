@@ -21,37 +21,39 @@ public class CalculatorImpl {
                 "Operator : ", operator,
                 "Second Number : ", secondNumber
         };
-        int calculatorOption = JOptionPane.showConfirmDialog(
-                null,
-                message,
-                "Calculator",
-                JOptionPane.YES_NO_CANCEL_OPTION,
-                JOptionPane.PLAIN_MESSAGE,
-                Calculator.getIcon());
-        if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
-            calculator.setOperation("ADD");
-        } else if (operator.getText().equalsIgnoreCase("SUBTRACT") || operator.getText().equals("-")) {
-            calculator.setOperation("SUBTRACT");
-        } else if (operator.getText().equalsIgnoreCase("MULTIPLY") || operator.getText().equals("*") || operator.getText().equalsIgnoreCase("X")) {
-            calculator.setOperation("MULTIPLY");
-        } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/") || operator.getText().equals("÷")) {
-            calculator.setOperation("DIVIDE");
-        } else {
-            JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again");
-            // Sleep for 1000 milliseconds
-            try {
-                Thread.sleep(1000);
-            } catch (Exception e) {
-                System.err.println("Invalid Sleep Input.");
+        do {
+            int calculatorOption = JOptionPane.showConfirmDialog(
+                    null,
+                    message,
+                    "Calculator",
+                    JOptionPane.YES_NO_CANCEL_OPTION,
+                    JOptionPane.PLAIN_MESSAGE,
+                    Calculator.getIcon());
+            if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
+                calculator.setOperation("ADD");
+            } else if (operator.getText().equalsIgnoreCase("SUBTRACT") || operator.getText().equals("-")) {
+                calculator.setOperation("SUBTRACT");
+            } else if (operator.getText().equalsIgnoreCase("MULTIPLY") || operator.getText().equals("*") || operator.getText().equalsIgnoreCase("X")) {
+                calculator.setOperation("MULTIPLY");
+            } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/") || operator.getText().equals("÷")) {
+                calculator.setOperation("DIVIDE");
+            } else {
+                JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again");
+                // Sleep for 1000 milliseconds
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception e) {
+                    System.err.println("Invalid Sleep Input.");
+                }
+                error = -1;
             }
-            error = -1;
-        }
-        if (calculatorOption == JOptionPane.OK_OPTION) {
-            // Start the if condition to check the operation and call the respective method
-            if (calculator.getOperation().equals("Add")) {
-                calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
-                calculator.displayDetails();
+            if (calculatorOption == JOptionPane.OK_OPTION) {
+                // Start the if condition to check the operation and call the respective method
+                if (calculator.getOperation().equals("Add")) {
+                    calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
+                    calculator.displayDetails();
+                }
             }
-        }
+        } while (error != 0);
     }
 }
