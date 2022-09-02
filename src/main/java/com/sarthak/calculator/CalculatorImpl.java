@@ -31,8 +31,10 @@ public class CalculatorImpl {
                     Calculator.getIcon()
             );
             if (calculatorOption == JOptionPane.OK_OPTION) {
+                error = 0;
                 if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
                     calculator.setOperation("ADD");
+                    calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
                 } else if (operator.getText().equalsIgnoreCase("SUBTRACT") || operator.getText().equals("-")) {
                     calculator.setOperation("SUBTRACT");
                 } else if (operator.getText().equalsIgnoreCase("MULTIPLY") || operator.getText().equals("*")
@@ -50,7 +52,7 @@ public class CalculatorImpl {
                             Calculator.getIcon()
                     );
                     error = -1;
-            }
+                }
             }
         } while (error != 0);
     }
