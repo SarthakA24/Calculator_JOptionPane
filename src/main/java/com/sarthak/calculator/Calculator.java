@@ -30,8 +30,12 @@ public class Calculator {
                     JOptionPane.PLAIN_MESSAGE,
                     icon);
         }
+        programEndDisplay();
     }
 
+    public void programEndDisplay() {
+        System.out.println("Program Ended Successfully!");
+    }
 
     public Calculator() {
     }
