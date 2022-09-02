@@ -40,18 +40,17 @@ public class CalculatorImpl {
             } else {
                 JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again");
                 // Sleep for 1000 milliseconds
-                try {
-                    Thread.sleep(1000);
-                } catch (Exception e) {
-                    System.err.println("Invalid Sleep Input.");
-                }
+//                try {
+//                    Thread.sleep(1000);
+//                } catch (Exception e) {
+//                    System.err.println("Invalid Sleep Input.");
+//                }
                 error = -1;
             }
             if (calculatorOption == JOptionPane.OK_OPTION) {
                 // Start the if condition to check the operation and call the respective method
-                if (calculator.getOperation().equals("Add")) {
+                if (calculator.getOperation().equals("ADD")) {
                     calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
-                    calculator.displayDetails();
                 }
             }
         } while (error != 0);

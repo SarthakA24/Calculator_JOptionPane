@@ -19,10 +19,11 @@ public class Calculator {
         for (double number : numbers) {
             this.sum += number;
         }
+        displayDetails();
     }
 
     public void displayDetails() {
-        if (operation.equals("Add")) {
+        if (operation.equals("ADD")) {
             JOptionPane.showMessageDialog(
                     null,
                     "The sum of the numbers is " + sum,
