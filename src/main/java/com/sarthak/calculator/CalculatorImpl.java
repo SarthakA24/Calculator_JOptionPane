@@ -50,6 +50,7 @@ public class CalculatorImpl {
                             JOptionPane.ERROR_MESSAGE,
                             Calculator.getIcon()
                     );
+                    wantToRetry = calculator.wantToRetry();
                 }
             } else {
                 wantToRetry = calculator.wantToRetry();
