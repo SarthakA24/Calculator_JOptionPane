@@ -37,7 +37,14 @@ public class CalculatorImpl {
         } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/") || operator.getText().equals("÷")) {
             calculator.setOperation("DIVIDE");
         } else {
-            System.out.println("Invalid input for Operator. Please try again!");
+            JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again");
+            // Sleep for 1000 milliseconds
+            try {
+                Thread.sleep(1000);
+            } catch (Exception e) {
+                System.err.println("Invalid Sleep Input.");
+            }
+            error = -1;
         }
         if (calculatorOption == JOptionPane.OK_OPTION) {
             // Start the if condition to check the operation and call the respective method
