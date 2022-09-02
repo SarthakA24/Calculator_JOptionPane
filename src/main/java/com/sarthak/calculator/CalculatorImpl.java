@@ -53,6 +53,19 @@ public class CalculatorImpl {
                     );
                     error = -1;
                 }
+            } else {
+                int response = JOptionPane.showConfirmDialog(
+                        null,
+                        "Do you want to re-try?",
+                        "Calculator",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        Calculator.getIcon()
+                );
+                if (response == JOptionPane.YES_OPTION)
+                    error = -1;
+                else
+                    error = 0;
             }
         } while (error != 0);
     }
