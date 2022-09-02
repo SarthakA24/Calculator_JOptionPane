@@ -15,6 +15,11 @@ public class CalculatorImpl {
         JTextField firstNumber = new JTextField();
         JTextField operator = new JTextField();
         JTextField secondNumber = new JTextField();
+        Object[] message = {
+                "First Number : ", firstNumber,
+                "Operator : ", operator,
+                "Second Number : ", secondNumber
+        };
         double input = Double.parseDouble((String) JOptionPane.showInputDialog(
                 null,
                 "Enter the number",
