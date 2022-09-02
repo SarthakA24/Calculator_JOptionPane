@@ -12,6 +12,9 @@ public class CalculatorImpl {
         // Create and object for the calculator class
         Calculator calculator = new Calculator();
         // Prompt the user to enter the number using JOptionPane
+        JTextField firstNumber = new JTextField();
+        JTextField operator = new JTextField();
+        JTextField secondNumber = new JTextField();
         double input = Double.parseDouble((String) JOptionPane.showInputDialog(
                 null,
                 "Enter the number",
