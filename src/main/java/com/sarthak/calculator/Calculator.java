@@ -34,6 +34,12 @@ public class Calculator {
         this.sum = firstNumber + secondNumber;
     }
 
+    /**
+     * This method subtracts the second number from the first number
+     *
+     * @param firstNumber  First number for the operation
+     * @param secondNumber Second Number for the operation
+     */
     public void subtract(double firstNumber, double secondNumber) {
         this.subtract = firstNumber - secondNumber;
     }
