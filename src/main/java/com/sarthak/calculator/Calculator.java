@@ -71,6 +71,9 @@ public class Calculator {
         this.divide = firstNumber / secondNumber;
     }
 
+    /**
+     * This method is used to display the details of the operation based on the operation
+     */
     public void displayDetails() {
         switch (operation) {
             case "ADD":
