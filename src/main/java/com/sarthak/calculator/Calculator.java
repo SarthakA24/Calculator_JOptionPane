@@ -38,6 +38,11 @@ public class Calculator {
         this.operation = operation;
     }
 
+    /**
+     * This method is used to get the icon for JOptionPane operations
+     *
+     * @return The icon for JOptionPane operations
+     */
     public static Icon getIcon() {
         return icon;
     }
