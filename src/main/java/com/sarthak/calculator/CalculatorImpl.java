@@ -43,7 +43,8 @@ public class CalculatorImpl {
                         calculator.multiply(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                         calculator.displayDetails();
                     } else if (calculator.getOperation().equals("DIVIDE")) {
-
+                        calculator.divide(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                        calculator.displayDetails();
                     } else {
                         wantToRetry = calculator.wantToRetry();
                     }
