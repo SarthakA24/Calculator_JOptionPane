@@ -131,6 +131,12 @@ public class Calculator {
         return operation;
     }
 
+    /**
+     * This method is used to set the operation to be performed
+     *
+     * @param operation The operation to be performed
+     * @return The boolean response if the method is executed successfully or not
+     */
     public boolean setOperation(String operation) {
         if (operation.equalsIgnoreCase("ADD") || operation.equals("+")) {
             this.operation = "ADD";
