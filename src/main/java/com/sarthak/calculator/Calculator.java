@@ -110,30 +110,6 @@ public class Calculator {
         System.out.println("Program Ended Successfully!");
     }
 
-    public double getSum() {
-        return sum;
-    }
-
-    public void setSum(double sum) {
-        this.sum = sum;
-    }
-
-    public double getSubtract() {
-        return subtract;
-    }
-
-    public void setSubtract(double subtract) {
-        this.subtract = subtract;
-    }
-
-    public double getMultiply() {
-        return multiply;
-    }
-
-    public void setMultiply(double multiply) {
-        this.multiply = multiply;
-    }
-
     public String getOperation() {
         return operation;
     }
@@ -155,13 +131,5 @@ public class Calculator {
             JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again", "Calculator", JOptionPane.ERROR_MESSAGE, Calculator.getIcon());
             return false;
         }
-    }
-
-    public double getDivide() {
-        return divide;
-    }
-
-    public void setDivide(double divide) {
-        this.divide = divide;
     }
 }
