@@ -155,16 +155,16 @@ public class Calculator {
      */
     public boolean setOperation(String operation) {
         if (operation.equalsIgnoreCase("ADD")) {
-            this.operation = "ADD";
+            this.operation = String.valueOf(Operations.ADD);
             return true;
         } else if (operation.equalsIgnoreCase("SUBTRACT")) {
-            this.operation = "SUBTRACT";
+            this.operation = String.valueOf(Operations.SUBTRACT);
             return true;
         } else if (operation.equalsIgnoreCase("MULTIPLY")) {
-            this.operation = "MULTIPLY";
+            this.operation = String.valueOf(Operations.MULTIPLY);
             return true;
         } else if (operation.equalsIgnoreCase("DIVIDE")) {
-            this.operation = "DIVIDE";
+            this.operation = String.valueOf(Operations.DIVIDE);
             return true;
         } else {
             JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again", "Calculator", JOptionPane.ERROR_MESSAGE, Calculator.getIcon());
