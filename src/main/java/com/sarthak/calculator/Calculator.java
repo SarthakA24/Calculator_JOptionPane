@@ -92,12 +92,20 @@ public class Calculator {
         programEndDisplay();
     }
 
+    /**
+     * This method is used to display the details of the operation based on the operation
+     *
+     * @return The boolean response of the user for retrying the operation
+     */
     public boolean wantToRetry() {
         int response = JOptionPane.showConfirmDialog(null, "Do you want to re-try?", "Calculator", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE, Calculator.getIcon());
         if (response == JOptionPane.NO_OPTION) programEndDisplay();
         return response == JOptionPane.YES_OPTION;
     }
 
+    /**
+     * This method is just an indication if the program executed successfully or not
+     */
     public void programEndDisplay() {
         System.out.println("Program Ended Successfully!");
     }
