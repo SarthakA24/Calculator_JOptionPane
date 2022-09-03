@@ -30,6 +30,12 @@ public class Calculator {
         return icon;
     }
 
+    /**
+     * This method is used to add two numbers
+     *
+     * @param firstNumber  First number for the operation
+     * @param secondNumber Second Number for the operation
+     */
     public void add(double firstNumber, double secondNumber) {
         this.sum = firstNumber + secondNumber;
     }
