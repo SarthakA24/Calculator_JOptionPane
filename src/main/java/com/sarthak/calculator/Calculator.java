@@ -49,6 +49,12 @@ public class Calculator {
     public void displayDetails() {
         if (operation.equals("ADD")) {
             JOptionPane.showMessageDialog(null, "The sum of the numbers is " + sum, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+        } else if (operation.equals("SUBTRACT")) {
+            JOptionPane.showMessageDialog(null, "The difference of the numbers is " + subtract, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+        } else if (operation.equals("MULTIPLY")) {
+            JOptionPane.showMessageDialog(null, "The product of the numbers is " + multiply, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+        } else if (operation.equals("DIVIDE")) {
+            JOptionPane.showMessageDialog(null, "The quotient of the numbers is " + divide, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
         }
         programEndDisplay();
     }
