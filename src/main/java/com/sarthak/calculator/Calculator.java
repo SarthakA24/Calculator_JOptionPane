@@ -38,6 +38,10 @@ public class Calculator {
         this.subtract = firstNumber - secondNumber;
     }
 
+    public void multiply(double firstNumber, double secondNumber) {
+        this.multiply = firstNumber * secondNumber;
+    }
+
     public void displayDetails() {
         if (operation.equals("ADD")) {
             JOptionPane.showMessageDialog(null, "The sum of the numbers is " + sum, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
