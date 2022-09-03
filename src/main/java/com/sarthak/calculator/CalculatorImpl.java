@@ -31,25 +31,17 @@ public class CalculatorImpl {
                     Calculator.getIcon()
             );
             if (calculatorOption == JOptionPane.OK_OPTION) {
-                if (operator.getText().equalsIgnoreCase("ADD") || operator.getText().equals("+")) {
-                    calculator.setOperation("ADD");
-                    calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
-                } else if (operator.getText().equalsIgnoreCase("SUBTRACT") || operator.getText().equals("-")) {
-                    calculator.setOperation("SUBTRACT");
-                } else if (operator.getText().equalsIgnoreCase("MULTIPLY") || operator.getText().equals("*")
-                        || operator.getText().equalsIgnoreCase("X")) {
-                    calculator.setOperation("MULTIPLY");
-                } else if (operator.getText().equalsIgnoreCase("DIVIDE") || operator.getText().equals("/")
-                        || operator.getText().equals("÷")) {
-                    calculator.setOperation("DIVIDE");
+                boolean isOperationSetSuccess = calculator.setOperation(operator.getText());
+                if (isOperationSetSuccess) {
+                    if (calculator.getOperation().equals("ADD"))
+                        calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
+                } else if (calculator.getOperation().equals("SUBTRACT")) {
+
+                } else if (calculator.getOperation().equals("MULTIPLY")) {
+
+                } else if (calculator.getOperation().equals("DIVIDE")) {
+
                 } else {
-                    JOptionPane.showMessageDialog(
-                            null,
-                            "Invalid Input for Operator. Please try again",
-                            "Calculator",
-                            JOptionPane.ERROR_MESSAGE,
-                            Calculator.getIcon()
-                    );
                     wantToRetry = calculator.wantToRetry();
                 }
             } else {
