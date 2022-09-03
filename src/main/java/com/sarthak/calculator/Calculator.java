@@ -13,14 +13,13 @@ public class Calculator {
     private double subtract;
     private double multiply;
     private double divide;
-    private String operation;
+    Operations operations;
 
     enum Operations {
         ADD("ADD"),
         SUBTRACT("SUBTRACT"),
         MULTIPLY("MULTIPLY"),
         DIVIDE("DIVIDE");
-
         Operations(String operation) {
         }
     }
@@ -35,18 +34,18 @@ public class Calculator {
     /**
      * Constructor with parameters
      *
-     * @param sum       The sum of the two numbers
-     * @param subtract  The difference of the two numbers
-     * @param multiply  The product of the two numbers
-     * @param divide    The quotient of the two numbers
-     * @param operation The operation to be performed
+     * @param sum        The sum of the two numbers
+     * @param subtract   The difference of the two numbers
+     * @param multiply   The product of the two numbers
+     * @param divide     The quotient of the two numbers
+     * @param operations The operation to be performed
      */
-    public Calculator(double sum, double subtract, double multiply, double divide, String operation) {
+    public Calculator(double sum, double subtract, double multiply, double divide, Operations operations) {
         this.sum = sum;
         this.subtract = subtract;
         this.multiply = multiply;
         this.divide = divide;
-        this.operation = operation;
+        this.operations = operations;
     }
 
     /**
@@ -103,17 +102,17 @@ public class Calculator {
      * This method is used to display the details of the operation based on the operation
      */
     public void displayDetails() {
-        switch (operation) {
-            case "ADD":
+        switch (operations) {
+            case ADD:
                 JOptionPane.showMessageDialog(null, "The sum of the numbers is " + sum, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
-            case "SUBTRACT":
+            case SUBTRACT:
                 JOptionPane.showMessageDialog(null, "The difference of the numbers is " + subtract, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
-            case "MULTIPLY":
+            case MULTIPLY:
                 JOptionPane.showMessageDialog(null, "The product of the numbers is " + multiply, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
-            case "DIVIDE":
+            case DIVIDE:
                 JOptionPane.showMessageDialog(null, "The quotient of the numbers is " + divide, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
         }
@@ -138,13 +137,8 @@ public class Calculator {
         System.out.println("Program Ended Successfully!");
     }
 
-    /**
-     * This method is used to get the operation to be performed
-     *
-     * @return The operation to be performed
-     */
-    public String getOperation() {
-        return operation;
+    public Operations getOperations() {
+        return operations;
     }
 
     /**
@@ -154,17 +148,17 @@ public class Calculator {
      * @return The boolean response if the method is executed successfully or not
      */
     public boolean setOperation(String operation) {
-        if (operation.equalsIgnoreCase("ADD")) {
-            this.operation = String.valueOf(Operations.ADD);
+        if (operation.equalsIgnoreCase(String.valueOf(Operations.ADD))) {
+            this.operations = Operations.ADD;
             return true;
-        } else if (operation.equalsIgnoreCase("SUBTRACT")) {
-            this.operation = String.valueOf(Operations.SUBTRACT);
+        } else if (operation.equalsIgnoreCase(String.valueOf(Operations.SUBTRACT))) {
+            this.operations = Operations.SUBTRACT;
             return true;
-        } else if (operation.equalsIgnoreCase("MULTIPLY")) {
-            this.operation = String.valueOf(Operations.MULTIPLY);
+        } else if (operation.equalsIgnoreCase(String.valueOf(Operations.MULTIPLY))) {
+            this.operations = Operations.MULTIPLY;
             return true;
-        } else if (operation.equalsIgnoreCase("DIVIDE")) {
-            this.operation = String.valueOf(Operations.DIVIDE);
+        } else if (operation.equalsIgnoreCase(String.valueOf(Operations.DIVIDE))) {
+            this.operations = Operations.DIVIDE;
             return true;
         } else {
             JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again", "Calculator", JOptionPane.ERROR_MESSAGE, Calculator.getIcon());
