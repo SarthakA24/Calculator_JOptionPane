@@ -143,16 +143,16 @@ public class Calculator {
      * @return The boolean response if the method is executed successfully or not
      */
     public boolean setOperation(String operation) {
-        if (operation.equalsIgnoreCase("ADD") || operation.equals("+")) {
+        if (operation.equalsIgnoreCase("ADD")) {
             this.operation = "ADD";
             return true;
-        } else if (operation.equalsIgnoreCase("SUBTRACT") || operation.equals("-")) {
+        } else if (operation.equalsIgnoreCase("SUBTRACT")) {
             this.operation = "SUBTRACT";
             return true;
-        } else if (operation.equalsIgnoreCase("MULTIPLY") || operation.equals("*") || operation.equalsIgnoreCase("X")) {
+        } else if (operation.equalsIgnoreCase("MULTIPLY")) {
             this.operation = "MULTIPLY";
             return true;
-        } else if (operation.equalsIgnoreCase("DIVIDE") || operation.equals("/") || operation.equals("÷")) {
+        } else if (operation.equalsIgnoreCase("DIVIDE")) {
             this.operation = "DIVIDE";
             return true;
         } else {
