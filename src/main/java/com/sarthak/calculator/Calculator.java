@@ -17,12 +17,10 @@ public class Calculator {
     Operations operations;
 
     enum Operations {
-        ADD("ADD"),
-        SUBTRACT("SUBTRACT"),
-        MULTIPLY("MULTIPLY"),
-        DIVIDE("DIVIDE");
-        Operations(String operation) {
-        }
+        ADD,
+        SUBTRACT,
+        MULTIPLY,
+        DIVIDE
     }
 
 
