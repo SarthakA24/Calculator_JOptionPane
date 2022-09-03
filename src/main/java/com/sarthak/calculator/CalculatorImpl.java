@@ -14,14 +14,20 @@ public class CalculatorImpl {
         Calculator calculator = new Calculator();
         // Prompt the user to enter the number using JOptionPane
         JTextField firstNumber = new JTextField();
-        JTextField operator = new JTextField();
         JTextField secondNumber = new JTextField();
         Object[] message = {
                 "First Number : ", firstNumber,
-                "Operator : ", operator,
                 "Second Number : ", secondNumber
         };
         do {
+            String operation = String.valueOf(JOptionPane.showInputDialog(
+                    null,
+                    "Select the operation you need to perform",
+                    "Calculator",
+                    JOptionPane.ERROR_MESSAGE,
+                    Calculator.getIcon(),
+                    new String[]{"Add", "Subtract", "Multiply", "Divide"},
+                    "Add"));
             int calculatorOption = JOptionPane.showConfirmDialog(
                     null,
                     message,
@@ -31,7 +37,7 @@ public class CalculatorImpl {
                     Calculator.getIcon()
             );
             if (calculatorOption == JOptionPane.OK_OPTION) {
-                boolean isOperationSetSuccess = calculator.setOperation(operator.getText());
+                boolean isOperationSetSuccess = calculator.setOperation(operation);
                 if (isOperationSetSuccess) {
                     switch (calculator.getOperation()) {
                         case "ADD":
