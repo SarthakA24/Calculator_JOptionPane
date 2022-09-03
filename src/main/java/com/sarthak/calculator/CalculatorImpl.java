@@ -40,23 +40,23 @@ public class CalculatorImpl {
             if (calculatorOption == JOptionPane.OK_OPTION) {
                 boolean isOperationSetSuccess = calculator.setOperation(operation);
                 if (isOperationSetSuccess) {
-                    switch (calculator.getOperation()) {
-                        case "ADD":
+                    switch (calculator.getOperations()) {
+                        case ADD:
                             calculator.add(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
-                        case "SUBTRACT":
+                        case SUBTRACT:
                             calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
-                        case "MULTIPLY":
+                        case MULTIPLY:
                             calculator.multiply(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
-                        case "DIVIDE":
+                        case DIVIDE:
                             calculator.divide(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
