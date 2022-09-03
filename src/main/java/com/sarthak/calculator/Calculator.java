@@ -60,6 +60,13 @@ public class Calculator {
         this.multiply = firstNumber * secondNumber;
     }
 
+
+    /**
+     * This method divides the first number by the second number
+     *
+     * @param firstNumber  First number for the operation
+     * @param secondNumber Second Number for the operation
+     */
     public void divide(double firstNumber, double secondNumber) {
         this.divide = firstNumber / secondNumber;
     }
