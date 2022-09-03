@@ -36,18 +36,19 @@ public class CalculatorImpl {
                     if (calculator.getOperation().equals("ADD")) {
                         calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
                         calculator.displayDetails();
+                    } else if (calculator.getOperation().equals("SUBTRACT")) {
+
+
+                    } else if (calculator.getOperation().equals("MULTIPLY")) {
+
+                    } else if (calculator.getOperation().equals("DIVIDE")) {
+
+                    } else {
+                        wantToRetry = calculator.wantToRetry();
                     }
-                } else if (calculator.getOperation().equals("SUBTRACT")) {
-
-                } else if (calculator.getOperation().equals("MULTIPLY")) {
-
-                } else if (calculator.getOperation().equals("DIVIDE")) {
-
                 } else {
                     wantToRetry = calculator.wantToRetry();
                 }
-            } else {
-                wantToRetry = calculator.wantToRetry();
             }
         } while (wantToRetry);
     }
