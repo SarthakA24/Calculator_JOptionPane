@@ -127,6 +127,11 @@ public class Calculator {
         System.out.println("Program Ended Successfully!");
     }
 
+    /**
+     * This method is used to get the operation to be performed
+     *
+     * @return The operation to be performed
+     */
     public String getOperation() {
         return operation;
     }
