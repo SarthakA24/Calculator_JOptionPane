@@ -37,18 +37,22 @@ public class CalculatorImpl {
                         case "ADD":
                             calculator.add(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
+                            wantToRetry = calculator.wantToRetry();
                             break;
                         case "SUBTRACT":
                             calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
+                            wantToRetry = calculator.wantToRetry();
                             break;
                         case "MULTIPLY":
                             calculator.multiply(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
+                            wantToRetry = calculator.wantToRetry();
                             break;
                         case "DIVIDE":
                             calculator.divide(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                             calculator.displayDetails();
+                            wantToRetry = calculator.wantToRetry();
                             break;
                         default:
                             wantToRetry = calculator.wantToRetry();
