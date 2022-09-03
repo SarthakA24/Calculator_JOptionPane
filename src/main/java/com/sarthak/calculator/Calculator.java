@@ -6,6 +6,7 @@
 package com.sarthak.calculator;
 
 import javax.swing.*;
+import java.util.Objects;
 
 public class Calculator {
     private final static Icon icon = new ImageIcon("src/main/resources/images/Calculator-icon.png");
@@ -164,5 +165,30 @@ public class Calculator {
             JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again", "Calculator", JOptionPane.ERROR_MESSAGE, Calculator.getIcon());
             return false;
         }
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Calculator)) return false;
+        Calculator that = (Calculator) o;
+        return Double.compare(that.sum, sum) == 0 && Double.compare(that.subtract, subtract) == 0 && Double.compare(that.multiply, multiply) == 0 && Double.compare(that.divide, divide) == 0 && getOperations() == that.getOperations();
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(sum, subtract, multiply, divide, getOperations());
+    }
+
+    @Override
+    public String
+    toString() {
+        return "Calculator{" +
+                "sum=" + sum +
+                ", subtract=" + subtract +
+                ", multiply=" + multiply +
+                ", divide=" + divide +
+                ", operations=" + operations +
+                '}';
     }
 }
