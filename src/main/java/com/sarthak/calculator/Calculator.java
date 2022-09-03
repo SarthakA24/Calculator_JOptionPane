@@ -15,9 +15,21 @@ public class Calculator {
     private double divide;
     private String operation;
 
+    /**
+     * Default / No-Args Constructor
+     */
     public Calculator() {
     }
 
+    /**
+     * Constructor with parameters
+     *
+     * @param sum       The sum of the two numbers
+     * @param subtract  The difference of the two numbers
+     * @param multiply  The product of the two numbers
+     * @param divide    The quotient of the two numbers
+     * @param operation The operation to be performed
+     */
     public Calculator(double sum, double subtract, double multiply, double divide, String operation) {
         this.sum = sum;
         this.subtract = subtract;
