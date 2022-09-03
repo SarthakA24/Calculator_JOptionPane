@@ -38,6 +38,7 @@ public class CalculatorImpl {
                         calculator.displayDetails();
                     } else if (calculator.getOperation().equals("SUBTRACT")) {
                         calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                        calculator.displayDetails();
                     } else if (calculator.getOperation().equals("MULTIPLY")) {
 
                     } else if (calculator.getOperation().equals("DIVIDE")) {
