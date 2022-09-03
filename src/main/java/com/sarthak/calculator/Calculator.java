@@ -42,6 +42,10 @@ public class Calculator {
         this.multiply = firstNumber * secondNumber;
     }
 
+    public void divide(double firstNumber, double secondNumber) {
+        this.divide = firstNumber / secondNumber;
+    }
+
     public void displayDetails() {
         if (operation.equals("ADD")) {
             JOptionPane.showMessageDialog(null, "The sum of the numbers is " + sum, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
