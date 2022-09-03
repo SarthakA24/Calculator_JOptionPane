@@ -15,10 +15,11 @@ public class CalculatorImpl {
         // Prompt the user to enter the number using JOptionPane
         JTextField firstNumber = new JTextField();
         JTextField secondNumber = new JTextField();
-        Object[] message = {
+        Object[] numbersInput = {
                 "First Number : ", firstNumber,
                 "Second Number : ", secondNumber
         };
+        String[] operations = {"Add", "Subtract", "Multiply", "Divide"};
         do {
             String operation = String.valueOf(JOptionPane.showInputDialog(
                     null,
@@ -26,11 +27,11 @@ public class CalculatorImpl {
                     "Calculator",
                     JOptionPane.ERROR_MESSAGE,
                     Calculator.getIcon(),
-                    new String[]{"Add", "Subtract", "Multiply", "Divide"},
+                    operations,
                     "Add"));
             int calculatorOption = JOptionPane.showConfirmDialog(
                     null,
-                    message,
+                    numbersInput,
                     "Calculator",
                     JOptionPane.YES_NO_OPTION,
                     JOptionPane.PLAIN_MESSAGE,
