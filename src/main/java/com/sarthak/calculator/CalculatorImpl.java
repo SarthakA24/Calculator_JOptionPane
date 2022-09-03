@@ -40,7 +40,8 @@ public class CalculatorImpl {
                         calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                         calculator.displayDetails();
                     } else if (calculator.getOperation().equals("MULTIPLY")) {
-
+                        calculator.multiply(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                        calculator.displayDetails();
                     } else if (calculator.getOperation().equals("DIVIDE")) {
 
                     } else {
