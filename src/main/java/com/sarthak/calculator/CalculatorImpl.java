@@ -33,20 +33,26 @@ public class CalculatorImpl {
             if (calculatorOption == JOptionPane.OK_OPTION) {
                 boolean isOperationSetSuccess = calculator.setOperation(operator.getText());
                 if (isOperationSetSuccess) {
-                    if (calculator.getOperation().equals("ADD")) {
-                        calculator.add(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
-                        calculator.displayDetails();
-                    } else if (calculator.getOperation().equals("SUBTRACT")) {
-                        calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
-                        calculator.displayDetails();
-                    } else if (calculator.getOperation().equals("MULTIPLY")) {
-                        calculator.multiply(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
-                        calculator.displayDetails();
-                    } else if (calculator.getOperation().equals("DIVIDE")) {
-                        calculator.divide(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
-                        calculator.displayDetails();
-                    } else {
-                        wantToRetry = calculator.wantToRetry();
+                    switch (calculator.getOperation()) {
+                        case "ADD":
+                            calculator.add(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.displayDetails();
+                            break;
+                        case "SUBTRACT":
+                            calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.displayDetails();
+                            break;
+                        case "MULTIPLY":
+                            calculator.multiply(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.displayDetails();
+                            break;
+                        case "DIVIDE":
+                            calculator.divide(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.displayDetails();
+                            break;
+                        default:
+                            wantToRetry = calculator.wantToRetry();
+                            break;
                     }
                 } else {
                     wantToRetry = calculator.wantToRetry();
