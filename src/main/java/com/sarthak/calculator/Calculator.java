@@ -10,25 +10,18 @@ import java.util.Objects;
 
 public class Calculator {
     private final static Icon icon = new ImageIcon("src/main/resources/images/Calculator-icon.png");
+    Operations operations;
     private double sum;
     private double subtract;
     private double multiply;
     private double divide;
-    Operations operations;
-
-    enum Operations {
-        ADD,
-        SUBTRACT,
-        MULTIPLY,
-        DIVIDE
-    }
-
 
     /**
      * Default / No-Args Constructor
      */
     public Calculator() {
     }
+
 
     /**
      * Constructor with parameters
@@ -85,7 +78,6 @@ public class Calculator {
     public void multiply(double firstNumber, double secondNumber) {
         this.multiply = firstNumber * secondNumber;
     }
-
 
     /**
      * This method divides the first number by the second number
@@ -179,14 +171,11 @@ public class Calculator {
     }
 
     @Override
-    public String
-    toString() {
-        return "Calculator{" +
-                "sum=" + sum +
-                ", subtract=" + subtract +
-                ", multiply=" + multiply +
-                ", divide=" + divide +
-                ", operations=" + operations +
-                '}';
+    public String toString() {
+        return "Calculator{" + "sum=" + sum + ", subtract=" + subtract + ", multiply=" + multiply + ", divide=" + divide + ", operations=" + operations + '}';
+    }
+
+    enum Operations {
+        ADD, SUBTRACT, MULTIPLY, DIVIDE
     }
 }
