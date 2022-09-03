@@ -34,11 +34,10 @@ public class CalculatorImpl {
                 boolean isOperationSetSuccess = calculator.setOperation(operator.getText());
                 if (isOperationSetSuccess) {
                     if (calculator.getOperation().equals("ADD")) {
-                        calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
+                        calculator.add(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                         calculator.displayDetails();
                     } else if (calculator.getOperation().equals("SUBTRACT")) {
-
-
+                        calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
                     } else if (calculator.getOperation().equals("MULTIPLY")) {
 
                     } else if (calculator.getOperation().equals("DIVIDE")) {
