@@ -34,7 +34,12 @@ public class Calculator {
         for (double number : numbers) {
             this.sum += number;
         }
-        displayDetails();
+    }
+
+    public void subtract(double... numbers) {
+        for (double number : numbers) {
+            this.subtract -= number;
+        }
     }
 
     public void displayDetails() {

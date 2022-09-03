@@ -33,8 +33,10 @@ public class CalculatorImpl {
             if (calculatorOption == JOptionPane.OK_OPTION) {
                 boolean isOperationSetSuccess = calculator.setOperation(operator.getText());
                 if (isOperationSetSuccess) {
-                    if (calculator.getOperation().equals("ADD"))
+                    if (calculator.getOperation().equals("ADD")) {
                         calculator.add(Integer.parseInt(firstNumber.getText()), Integer.parseInt(secondNumber.getText()));
+                        calculator.displayDetails();
+                    }
                 } else if (calculator.getOperation().equals("SUBTRACT")) {
 
                 } else if (calculator.getOperation().equals("MULTIPLY")) {
