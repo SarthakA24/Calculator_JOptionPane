@@ -50,6 +50,12 @@ public class Calculator {
         this.subtract = firstNumber - secondNumber;
     }
 
+    /**
+     * This method multiplies the two numbers
+     *
+     * @param firstNumber  First number for the operation
+     * @param secondNumber Second Number for the operation
+     */
     public void multiply(double firstNumber, double secondNumber) {
         this.multiply = firstNumber * secondNumber;
     }
