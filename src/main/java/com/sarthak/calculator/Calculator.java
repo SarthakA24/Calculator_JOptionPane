@@ -30,16 +30,12 @@ public class Calculator {
         return icon;
     }
 
-    public void add(double... numbers) {
-        for (double number : numbers) {
-            this.sum += number;
-        }
+    public void add(double firstNumber, double secondNumber) {
+        this.sum = firstNumber + secondNumber;
     }
 
-    public void subtract(double... numbers) {
-        for (double number : numbers) {
-            this.subtract -= number;
-        }
+    public void subtract(double firstNumber, double secondNumber) {
+        this.subtract = firstNumber - secondNumber;
     }
 
     public void displayDetails() {
