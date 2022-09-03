@@ -15,6 +15,17 @@ public class Calculator {
     private double divide;
     private String operation;
 
+    enum Operations {
+        ADD("ADD"),
+        SUBTRACT("SUBTRACT"),
+        MULTIPLY("MULTIPLY"),
+        DIVIDE("DIVIDE");
+
+        Operations(String operation) {
+        }
+    }
+
+
     /**
      * Default / No-Args Constructor
      */
