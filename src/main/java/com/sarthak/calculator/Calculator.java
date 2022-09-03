@@ -91,8 +91,31 @@ public class Calculator {
         return operation;
     }
 
-    public void setOperation(String operation) {
-        this.operation = operation;
+    public boolean setOperation(String operation) {
+        if (operation.equalsIgnoreCase("ADD") || operation.equals("+")) {
+            this.operation = "ADD";
+            return true;
+        } else if (operation.equalsIgnoreCase("SUBTRACT") || operation.equals("-")) {
+            this.operation = "SUBTRACT";
+            return true;
+        } else if (operation.equalsIgnoreCase("MULTIPLY") || operation.equals("*")
+                || operation.equalsIgnoreCase("X")) {
+            this.operation = "MULTIPLY";
+            return true;
+        } else if (operation.equalsIgnoreCase("DIVIDE") || operation.equals("/")
+                || operation.equals("÷")) {
+            this.operation = "DIVIDE";
+            return true;
+        } else {
+            JOptionPane.showMessageDialog(
+                    null,
+                    "Invalid Input for Operator. Please try again",
+                    "Calculator",
+                    JOptionPane.ERROR_MESSAGE,
+                    Calculator.getIcon()
+            );
+            return false;
+        }
     }
 
     public void setMultiply(double multiply) {
