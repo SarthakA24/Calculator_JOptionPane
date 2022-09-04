@@ -15,6 +15,7 @@ public class Calculator {
     private double subtract;
     private double multiply;
     private double divide;
+    private double power;
 
     /**
      * Default / No-Args Constructor
