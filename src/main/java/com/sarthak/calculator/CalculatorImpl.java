@@ -16,7 +16,7 @@ public class CalculatorImpl {
         JTextField firstNumber = new JTextField();
         JTextField secondNumber = new JTextField();
         Object[] numbersInput = {"First Number : ", firstNumber, "Second Number : ", secondNumber};
-        String[] operations = {"Add", "Subtract", "Multiply", "Divide"};
+        String[] operations = {"Add", "Subtract", "Multiply", "Divide", "Power"};
         do {
             String operation = String.valueOf(JOptionPane.showInputDialog(null, "Select the operation you need to perform", "Calculator", JOptionPane.ERROR_MESSAGE, Calculator.getIcon(), operations, "Add"));
             int calculatorOption = JOptionPane.showConfirmDialog(null, numbersInput, "Calculator", JOptionPane.YES_NO_OPTION, JOptionPane.PLAIN_MESSAGE, Calculator.getIcon());
