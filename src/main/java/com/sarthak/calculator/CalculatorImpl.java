@@ -23,31 +23,31 @@ public class CalculatorImpl {
             if (calculatorOption == JOptionPane.OK_OPTION) {
                 boolean isOperationSetSuccess = calculator.setOperation(operation);
                 if (isOperationSetSuccess) {
+                    calculator.setFirstNumber(Double.parseDouble(firstNumber.getText()));
+                    calculator.setSecondNumber(Double.parseDouble(secondNumber.getText()));
                     switch (calculator.getOperations()) {
                         case ADD:
-                            calculator.setFirstNumber(Double.parseDouble(firstNumber.getText()));
-                            calculator.setSecondNumber(Double.parseDouble(secondNumber.getText()));
                             calculator.add();
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
                         case SUBTRACT:
-                            calculator.subtract(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.subtract();
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
                         case MULTIPLY:
-                            calculator.multiply(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.multiply();
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
                         case DIVIDE:
-                            calculator.divide(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.divide();
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
                         case POWER:
-                            calculator.power(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.power();
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
