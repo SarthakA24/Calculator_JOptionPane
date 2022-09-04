@@ -32,13 +32,15 @@ public class Calculator {
      * @param multiply   The product of the two numbers
      * @param divide     The quotient of the two numbers
      * @param operations The operation to be performed
+     * @param power      The power of the number
      */
-    public Calculator(double sum, double subtract, double multiply, double divide, Operations operations) {
+    public Calculator(double sum, double subtract, double multiply, double divide, Operations operations, double power) {
         this.sum = sum;
         this.subtract = subtract;
         this.multiply = multiply;
         this.divide = divide;
         this.operations = operations;
+        this.power = power;
     }
 
     /**
