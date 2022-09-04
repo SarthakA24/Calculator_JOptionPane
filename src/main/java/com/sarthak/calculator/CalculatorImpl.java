@@ -44,6 +44,11 @@ public class CalculatorImpl {
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
+                        case POWER:
+                            calculator.power(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.displayDetails();
+                            wantToRetry = calculator.wantToRetry();
+                            break;
                         default:
                             wantToRetry = calculator.wantToRetry();
                             break;
