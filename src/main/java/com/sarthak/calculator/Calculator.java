@@ -63,42 +63,30 @@ public class Calculator {
 
     /**
      * This method subtracts the second number from the first number
-     *
-     * @param firstNumber  First number for the operation
-     * @param secondNumber Second Number for the operation
      */
-    public void subtract(double firstNumber, double secondNumber) {
-        this.subtract = firstNumber - secondNumber;
+    public void subtract() {
+        this.subtract = this.firstNumber - this.secondNumber;
     }
 
     /**
      * This method multiplies the two numbers
-     *
-     * @param firstNumber  First number for the operation
-     * @param secondNumber Second Number for the operation
      */
-    public void multiply(double firstNumber, double secondNumber) {
-        this.multiply = firstNumber * secondNumber;
+    public void multiply() {
+        this.multiply = this.firstNumber * this.secondNumber;
     }
 
     /**
      * This method divides the first number by the second number
-     *
-     * @param firstNumber  First number for the operation
-     * @param secondNumber Second Number for the operation
      */
-    public void divide(double firstNumber, double secondNumber) {
-        this.divide = firstNumber / secondNumber;
+    public void divide() {
+        this.divide = this.firstNumber / this.secondNumber;
     }
 
     /**
      * This method is used to get the power of the first number raised to the second number
-     *
-     * @param firstNumber  First number for the operation
-     * @param secondNumber Second Number for the operation
      */
-    public void power(double firstNumber, double secondNumber) {
-        this.power = Math.pow(firstNumber, secondNumber);
+    public void power() {
+        this.power = Math.pow(this.firstNumber, this.secondNumber);
     }
 
     /**
