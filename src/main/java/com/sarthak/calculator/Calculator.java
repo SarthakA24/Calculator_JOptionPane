@@ -119,6 +119,9 @@ public class Calculator {
             case DIVIDE:
                 JOptionPane.showMessageDialog(null, "The quotient of the numbers is " + divide, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
+            case POWER:
+                JOptionPane.showMessageDialog(null, "The power of the numbers is " + power, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+                break;
         }
         programEndDisplay();
     }
