@@ -90,6 +90,12 @@ public class Calculator {
         this.divide = firstNumber / secondNumber;
     }
 
+    /**
+     * This method is used to get the power of the first number raised to the second number
+     *
+     * @param firstNumber  First number for the operation
+     * @param secondNumber Second Number for the operation
+     */
     public void power(double firstNumber, double secondNumber) {
         this.power = Math.pow(firstNumber, secondNumber);
     }
