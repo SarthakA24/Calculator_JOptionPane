@@ -95,19 +95,19 @@ public class Calculator {
     public void displayDetails() {
         switch (operations) {
             case ADD:
-                JOptionPane.showMessageDialog(null, "The sum of the numbers is " + sum, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+                JOptionPane.showMessageDialog(null, "The result of " + this.firstNumber + " + " + this.secondNumber + " is = " + sum, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
             case SUBTRACT:
-                JOptionPane.showMessageDialog(null, "The difference of the numbers is " + subtract, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+                JOptionPane.showMessageDialog(null, "The result of " + this.firstNumber + " - " + this.secondNumber + " is = " + subtract, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
             case MULTIPLY:
-                JOptionPane.showMessageDialog(null, "The product of the numbers is " + multiply, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+                JOptionPane.showMessageDialog(null, "The result of " + this.firstNumber + " * " + this.secondNumber + " is = " + multiply, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
             case DIVIDE:
-                JOptionPane.showMessageDialog(null, "The quotient of the numbers is " + divide, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+                JOptionPane.showMessageDialog(null, "The result of " + this.firstNumber + " / " + this.secondNumber + " is = " + divide, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
             case POWER:
-                JOptionPane.showMessageDialog(null, "The power of the numbers is " + power, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
+                JOptionPane.showMessageDialog(null, "The result of " + this.firstNumber + " ^ " + this.secondNumber + " is = " + power, "Calculator", JOptionPane.PLAIN_MESSAGE, icon);
                 break;
         }
         programEndDisplay();
