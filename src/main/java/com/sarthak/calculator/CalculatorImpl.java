@@ -25,7 +25,9 @@ public class CalculatorImpl {
                 if (isOperationSetSuccess) {
                     switch (calculator.getOperations()) {
                         case ADD:
-                            calculator.add(Double.parseDouble(firstNumber.getText()), Double.parseDouble(secondNumber.getText()));
+                            calculator.setFirstNumber(Double.parseDouble(firstNumber.getText()));
+                            calculator.setSecondNumber(Double.parseDouble(secondNumber.getText()));
+                            calculator.add();
                             calculator.displayDetails();
                             wantToRetry = calculator.wantToRetry();
                             break;
