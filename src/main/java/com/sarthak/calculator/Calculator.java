@@ -16,6 +16,8 @@ public class Calculator {
     private double multiply;
     private double divide;
     private double power;
+    private double firstNumber;
+    private double secondNumber;
 
     /**
      * Default / No-Args Constructor
@@ -54,12 +56,9 @@ public class Calculator {
 
     /**
      * This method is used to add two numbers
-     *
-     * @param firstNumber  First number for the operation
-     * @param secondNumber Second Number for the operation
      */
-    public void add(double firstNumber, double secondNumber) {
-        this.sum = firstNumber + secondNumber;
+    public void add() {
+        this.sum = this.firstNumber + this.secondNumber;
     }
 
     /**
@@ -203,5 +202,13 @@ public class Calculator {
                 ", divide=" + divide +
                 ", power=" + power +
                 '}';
+    }
+
+    public void setFirstNumber(double firstNumber) {
+        this.firstNumber = firstNumber;
+    }
+
+    public void setSecondNumber(double secondNumber) {
+        this.secondNumber = secondNumber;
     }
 }
