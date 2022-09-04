@@ -170,25 +170,32 @@ public class Calculator {
         }
     }
 
+    enum Operations {
+        ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Calculator)) return false;
         Calculator that = (Calculator) o;
-        return Double.compare(that.sum, sum) == 0 && Double.compare(that.subtract, subtract) == 0 && Double.compare(that.multiply, multiply) == 0 && Double.compare(that.divide, divide) == 0 && getOperations() == that.getOperations();
+        return Double.compare(that.sum, sum) == 0 && Double.compare(that.subtract, subtract) == 0 && Double.compare(that.multiply, multiply) == 0 && Double.compare(that.divide, divide) == 0 && Double.compare(that.power, power) == 0 && getOperations() == that.getOperations();
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(sum, subtract, multiply, divide, getOperations());
+        return Objects.hash(getOperations(), sum, subtract, multiply, divide, power);
     }
 
     @Override
     public String toString() {
-        return "Calculator{" + "sum=" + sum + ", subtract=" + subtract + ", multiply=" + multiply + ", divide=" + divide + ", operations=" + operations + '}';
-    }
-
-    enum Operations {
-        ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER
+        return "Calculator{" +
+                "operations=" + operations +
+                ", sum=" + sum +
+                ", subtract=" + subtract +
+                ", multiply=" + multiply +
+                ", divide=" + divide +
+                ", power=" + power +
+                '}';
     }
 }
