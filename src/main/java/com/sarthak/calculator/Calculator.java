@@ -89,6 +89,10 @@ public class Calculator {
         this.divide = firstNumber / secondNumber;
     }
 
+    public void power(double firstNumber, double secondNumber) {
+
+    }
+
     /**
      * This method is used to display the details of the operation based on the operation
      */
