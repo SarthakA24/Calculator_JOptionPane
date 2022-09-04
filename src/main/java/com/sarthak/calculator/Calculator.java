@@ -163,10 +163,6 @@ public class Calculator {
         }
     }
 
-    enum Operations {
-        ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -182,14 +178,7 @@ public class Calculator {
 
     @Override
     public String toString() {
-        return "Calculator{" +
-                "operations=" + operations +
-                ", sum=" + sum +
-                ", subtract=" + subtract +
-                ", multiply=" + multiply +
-                ", divide=" + divide +
-                ", power=" + power +
-                '}';
+        return "Calculator{" + "operations=" + operations + ", sum=" + sum + ", subtract=" + subtract + ", multiply=" + multiply + ", divide=" + divide + ", power=" + power + '}';
     }
 
     public void setFirstNumber(double firstNumber) {
@@ -198,5 +187,9 @@ public class Calculator {
 
     public void setSecondNumber(double secondNumber) {
         this.secondNumber = secondNumber;
+    }
+
+    enum Operations {
+        ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER
     }
 }
