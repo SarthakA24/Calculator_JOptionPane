@@ -189,6 +189,6 @@ public class Calculator {
     }
 
     enum Operations {
-        ADD, SUBTRACT, MULTIPLY, DIVIDE
+        ADD, SUBTRACT, MULTIPLY, DIVIDE, POWER
     }
 }
