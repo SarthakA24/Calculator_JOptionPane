@@ -91,7 +91,7 @@ public class Calculator {
     }
 
     public void power(double firstNumber, double secondNumber) {
-
+        this.power = Math.pow(firstNumber, secondNumber);
     }
 
     /**
