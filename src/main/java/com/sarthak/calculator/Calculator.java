@@ -164,6 +164,9 @@ public class Calculator {
         } else if (operation.equalsIgnoreCase(String.valueOf(Operations.DIVIDE))) {
             this.operations = Operations.DIVIDE;
             return true;
+        } else if (operation.equalsIgnoreCase(String.valueOf(Operations.POWER))) {
+            this.operations = Operations.POWER;
+            return true;
         } else {
             JOptionPane.showMessageDialog(null, "Invalid Input for Operator. Please try again", "Calculator", JOptionPane.ERROR_MESSAGE, Calculator.getIcon());
             return false;
